@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
 	void Start () {
         current_bullet_count = 10;
 	}
-    public float ForceValue = 100f;
+    public float ForceValue = 1500f;
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0))
