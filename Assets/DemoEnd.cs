@@ -9,7 +9,7 @@ public class DemoEnd : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        score.text ="Score:"+  Score.score;
+        score.text ="Score:"+  UIManager.current_score;
 	}
 	public void Restart()
     {

@@ -6,10 +6,10 @@ public class Enemy : MonoBehaviour {
     public EnemyCreater enemyCreater;
 	// Use this for initialization
 	void Start () {
-        enemyCreater.cont ++;
+        enemyCreater.count ++;
         var destroytimer = Random.Range(5f, 10f);
         Destroy(gameObject,destroytimer);
-       // StartCoroutine(EnemyMove());
+        StartCoroutine(EnemyMove());
     }
     public void OnDamage()
     {
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour {
     }
     private void OnDestroy()
     {
-        enemyCreater.cont --;
+        enemyCreater.count --;
     }
     public float MoveSpeed=3f;
 	IEnumerator EnemyMove()

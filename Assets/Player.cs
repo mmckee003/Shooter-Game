@@ -7,31 +7,31 @@ public class Player : MonoBehaviour {
     public GameObject BulletPrefab;
 
     public int MaxBulletCount = 10;
-    public int CurrBulletCount;
+    public int current_bullet_count;
 
 	// Use this for initialization
 	void Start () {
-        CurrBulletCount = 10;
+        current_bullet_count = 10;
 	}
     public float ForceValue = 100f;
 	// Update is called once per frame
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            if (CurrBulletCount > 0)
+            if (current_bullet_count > 0)
             {
                 var bullet = Instantiate(BulletPrefab);
                 bullet.transform.position = Camera.main.transform.position;
                 bullet.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * ForceValue);
                 Destroy(bullet, 5f);
-                CurrBulletCount--;
+                current_bullet_count--;
             }
         }
 
         // reload gun
         if (Input.GetKeyDown(KeyCode.R))
         {
-            CurrBulletCount = MaxBulletCount;
+            current_bullet_count = MaxBulletCount;
         }
 
         // Close application when ESC is pressed

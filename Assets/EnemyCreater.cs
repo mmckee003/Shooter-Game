@@ -6,7 +6,7 @@ public class EnemyCreater : MonoBehaviour {
   public  Vector3 P1, P2;
     public GameObject EnemyPrefab;
     
-    public int cont; 
+    public int count; 
     private void Awake()
     {
         P1 = transform.GetChild(0).position;
@@ -19,7 +19,7 @@ public class EnemyCreater : MonoBehaviour {
     float timer=5f;
 	// Update is called once per frame
 	void Update () {
-        if (timer>=2f&&cont<10)
+        if (timer >= 2f && count < 10)
         {
             timer = 0f;
             var enemy= Instantiate(EnemyPrefab);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BodyBody : BodyBase {
     public override void Hurt()
     {
-        Score.score++;
+        UIManager.current_score++;
         base.Hurt();
       
     }

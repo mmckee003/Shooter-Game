@@ -6,7 +6,7 @@ public class BodyHead : BodyBase {
 
     public override void Hurt()
     {
-        Score.score += 3;
+        UIManager.current_score += 3;
         base.Hurt();
         
     }
